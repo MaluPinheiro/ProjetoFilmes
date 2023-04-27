@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
     Sinopse: {
-        marginTop: 5
+        fontSize: 15,
+        marginTop: 5,
     },
     txtBtnComprar: {
         backgroundColor: '#0F4531',
