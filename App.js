@@ -5,21 +5,21 @@ import Cartoes from './CartaoFilme';
 
 export default function App() {
 
-  let [filmes,setFilme] = useState([])
+  let [filmes,setFilme] = useState([]);
   const baseUrl = 'https://api.otaviolube.com/api/filmes?populate=*'
 
-  useEffect((CartaoFilme) => {
-    fetch(baseUrl).then(data => data.json()).then(Object => {
-      setFilme(Object.data)
-    })
-  })
+  useEffect(function(){
+    fetch(baseUrl) 
+    .then(data => data.json())
+    .then(objeto => setFilme(objeto.data)) 
+  },[]);
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView horizontal={true} style={styles.scroll}>
         {
           filmes.length > 0 ? 
-          filmes.map(f => <Cartoes filme={f.attributes.titulo}/>):<ActivityIndicator size={'large'}/>
+          filmes.map(filme => <Cartoes key={filme.id} filme={filme.attributes.poster}/>):<ActivityIndicator size={'large'}/>
         }
         <StatusBar style="auto" />
       </ScrollView>
@@ -34,4 +34,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  scroll: {
+    height: '100%'
+  }
 });
