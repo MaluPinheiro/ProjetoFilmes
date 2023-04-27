@@ -19,7 +19,8 @@ export default function App() {
       <ScrollView horizontal={true} style={styles.scroll}>
         {
           filmes.length > 0 ? 
-          filmes.map(filme => <Cartoes key={filme.id} filme={filme.attributes.poster}/>):<ActivityIndicator size={'large'}/>
+          filmes.map(filme => <Cartoes key={filme.id} filme={filme.attributes}/>):
+          <ActivityIndicator size={'large'}/>
         }
         <StatusBar style="auto" />
       </ScrollView>
