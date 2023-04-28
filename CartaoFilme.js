@@ -8,8 +8,8 @@ export default function Cartoes({ filme }){
 
     return(
         <View style={styles.viewCartao}>
+            <Text style={styles.Titulo}>{filme.titulo}</Text>
             <Image style={styles.imgFilme} source={{uri: imgUrl}}/>
-            <Text style={styles.Titulo}>Titulo: {filme.titulo}</Text>
             <Text style={styles.Sinopse}>Sinopse: {filme.sinopse}</Text>
             <TouchableOpacity style={styles.button}> 
                 <Text style={styles.txtBtnComprar}> Comprar </Text>
@@ -20,29 +20,31 @@ export default function Cartoes({ filme }){
 const styles = StyleSheet.create({
     viewCartao: {
         backgroundColor: '#55B88A',
-        width: '6%',
-        height: '70%',
+        width: '5.5%',
+        height: '90%',
         padding: 8,
-        margin: 6,
+        marginLeft: 15,
+        marginTop: 15,
         borderWidth: 4,
         borderColor: '#0F4531',
         borderRadius: 10,
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     imgFilme: {
-        width: '50%',
+        width: '60%',
         height: '50%',
         borderWidth: 2,
         borderColor: 'white',
         borderRadius: 10
     },
     Titulo: {
-        marginTop: 3,
+        marginBottom: 20,
         fontWeight: 'bold',
-        fontSize: 20
+        fontSize: 30
     },
     Sinopse: {
-        fontSize: 15,
+        fontSize: 18,
         marginTop: 5,
     },
     txtBtnComprar: {
