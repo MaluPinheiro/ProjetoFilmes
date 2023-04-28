@@ -1,10 +1,10 @@
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-const baseUrl = 'https://api.otaviolube.com/api/filmes?populate=*'
+const Url = 'https://api.otaviolube.com/api/filmes'
 
 export default function Cartoes({ filme }){
 
-    const imgUrl = baseUrl + filme.poster.data.attributes.url
+    const imgUrl = Url + filme.poster.data.attributes.url
 
     return(
         <View style={styles.viewCartao}>
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     imgFilme: {
-        backgroundColor: 'blue',
+        backgroundColor: 'green',
         width: '50%',
         height: '50%',
         borderRadius: 10
