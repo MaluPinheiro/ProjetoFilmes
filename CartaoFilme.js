@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-const Url = 'https://api.otaviolube.com/api/filmes'
+const Url = 'https://api.otaviolube.com'
 
 export default function Cartoes({ filme }){
 
@@ -21,22 +21,25 @@ const styles = StyleSheet.create({
     viewCartao: {
         backgroundColor: '#55B88A',
         width: '6%',
-        height: '65%',
-        padding: 10,
-        margin: 10,
+        height: '70%',
+        padding: 8,
+        margin: 6,
+        borderWidth: 4,
+        borderColor: '#0F4531',
         borderRadius: 10,
         alignItems: 'center'
     },
     imgFilme: {
-        backgroundColor: 'green',
         width: '50%',
         height: '50%',
+        borderWidth: 2,
+        borderColor: 'white',
         borderRadius: 10
     },
     Titulo: {
         marginTop: 3,
         fontWeight: 'bold',
-        fontSize: 16
+        fontSize: 20
     },
     Sinopse: {
         fontSize: 15,
@@ -45,8 +48,11 @@ const styles = StyleSheet.create({
     txtBtnComprar: {
         backgroundColor: '#0F4531',
         borderRadius: 3,
-        padding: 3,
+        fontSize: 20,
+        fontWeight: 'bold',
+        padding: 6,
         marginTop: 20,
-        color: 'white'
+        color: 'white',
+        borderWidth: 1
     }
 })
